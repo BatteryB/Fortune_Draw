@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    perspective: 1000px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .6s;
+    user-select: none;
+}
+
+#card_front,
+#card_back {
+    backface-visibility: hidden;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    line-height: 50px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid darksalmon;
+}
+
+#card_front {
+    background-color: bisque;
+}
+
+#card_back {
+    transform: rotateY(180deg);
+    background-color: antiquewhite;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
